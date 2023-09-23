@@ -1,13 +1,13 @@
 let titletext = document.getElementsByClassName("name-head")[0];
 
 let resizeFunc = () => {
-    if(window.innerWidth > 1140){
+    if(window.innerWidth > 1200){
         titletext.innerText = "myaumyau.dev";
     }
-    else if(window.innerWidth > 780){
+    else if(window.innerWidth > 840){
         titletext.innerText = "myaumyau";
     }
-    else if(window.innerWidth > 420){
+    else if(window.innerWidth > 460){
         titletext.innerText = "myau";
     }
     else{

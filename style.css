@@ -35,7 +35,9 @@ body{
     --content-border: #9d2aa580;
 
     --bg-top-gradient: linear-gradient(0deg, #130e1700, var(--bg-main));
-    --bg-tile-image: url("bg.svg");
+    --bg-tile-image: url("bgmaskdark.png");
+    --bg-gradient-top: #f002;
+    --bg-gradient-bottom: #00f5;
     @media (prefers-color-scheme: light) {
         --bg-main: #fff;
         --text-dim: #8e7d8f;
@@ -54,17 +56,42 @@ body{
         --content-border: #ff4b4b80;
 
         --bg-top-gradient: linear-gradient(0deg, #fff0, var(--bg-main));
-        --bg-tile-image: url("bg-light.svg");
+        --bg-tile-image: url("bgmasklight.png");
+        --bg-gradient-top: #f001;
+        --bg-gradient-bottom: #00f1;
     }
+    background-image: linear-gradient(var(--bg-gradient-top), var(--bg-gradient-bottom), var(--bg-gradient-top));
+    background-size: 100vw 200vh;
+    background-repeat: repeat;
+    background-color: var(--bg-main);
+    background-attachment: fixed;
+    animation: 12s linear background-gradient-slide infinite;
+}
+
+@keyframes background-gradient-slide {
+    from{
+        background-position-y:-200vh;
+    }
+    to{
+        background-position-y: 0;
+    }
+}
+
+.main{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
     display:flex;
     flex-direction: column;
     justify-content: center;
+    background-color: black;
     /*background: var(--bg-main);*/
     background: var(--bg-top-gradient), var(--bg-tile-image);
     background-repeat: no-repeat, repeat;
     background-attachment: scroll, fixed;
     background-size: 100% 900px, 80px 80px;
-    background-position: 0px 300px, 0, 0;
+    background-position: 0px 300px, 0 calc(var(--scrollheight) * -0.05);
     font-family: Perfect-Dos;
 
     margin: 0px;
@@ -88,7 +115,6 @@ body{
     height:300px;
     overflow:hidden;
     border-bottom: 1px solid var(--bg-main); /* Only way to fix the annoying 1px gap */
-    z-index: -1;
 }
 
 .mountains-svg{

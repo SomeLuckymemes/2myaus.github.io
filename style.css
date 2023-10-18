@@ -18,6 +18,29 @@
 
 */
 
+body.light{
+    --bg-main: #fff;
+    --text-dim: #8e7d8f;
+    --text-med: #ff8080;
+    --text-light: #ff6060;
+    --text-light-2: #ffd319;
+    --text-light-3: #ffea8f;
+
+    --sun-light: #ffd319;
+    --sun-dark: #f222ff;
+
+    --sky-top: var(--bg-main);
+    --sky-mid: #d6daff;
+    --sky-bottom: #7080ca;
+
+    --content-border: #ff4b4b80;
+
+    --bg-top-gradient: linear-gradient(0deg, #fff0, var(--bg-main));
+    --bg-tile-image: url("bgmasklight.png");
+    --bg-gradient-top: #f001;
+    --bg-gradient-bottom: #00f1;
+}
+
 body{
     --bg-main: #130e17ff;
     --text-dim: #8e7d8f;
@@ -38,28 +61,6 @@ body{
     --bg-tile-image: url("bgmaskdark.png");
     --bg-gradient-top: #f002;
     --bg-gradient-bottom: #00f5;
-    @media (prefers-color-scheme: light) {
-        --bg-main: #fff;
-        --text-dim: #8e7d8f;
-        --text-med: #ff8080;
-        --text-light: #ff6060;
-        --text-light-2: #ffd319;
-        --text-light-3: #ffea8f;
-
-        --sun-light: #ffd319;
-        --sun-dark: #f222ff;
-
-        --sky-top: var(--bg-main);
-        --sky-mid: #d6daff;
-        --sky-bottom: #7080ca;
-
-        --content-border: #ff4b4b80;
-
-        --bg-top-gradient: linear-gradient(0deg, #fff0, var(--bg-main));
-        --bg-tile-image: url("bgmasklight.png");
-        --bg-gradient-top: #f001;
-        --bg-gradient-bottom: #00f1;
-    }
     background-image: linear-gradient(var(--bg-gradient-top), var(--bg-gradient-bottom), var(--bg-gradient-top));
     background-size: 100vw 200vh;
     background-repeat: repeat;
@@ -144,6 +145,13 @@ body{
     width:100%;
 }
 
+body.light .name-head{
+    filter:none;
+    --name-top: #ff17a6;
+    --name-mid: #ff5874;
+    --name-bottom: #e7e8f060;
+}
+
 .name-head{
     font-family: Kitty-M;
     --name-height: clamp(160px, 7.4vw, 285px);
@@ -155,12 +163,6 @@ body{
     --name-top: #ffd319;
     --name-mid: var(--text-light);
     --name-bottom: #130e1760;
-    @media (prefers-color-scheme: light) {
-        filter:none;
-        --name-top: #ff17a6;
-        --name-mid: #ff5874;
-        --name-bottom: #e7e8f060;
-    }
     background: linear-gradient(var(--name-top) 12.5%, var(--name-mid), var(--name-bottom) 37.5%, #0000 100%);
     /*background-color: var(--bg-main);*/
     background-size: 100% calc(var(--name-height) * 4.5);

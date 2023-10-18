@@ -427,6 +427,38 @@ body.light .name-head{
     width:min(100%, 140px);
 }
 
+.color-switch{
+    opacity:0.9;
+    cursor:pointer;
+    position:absolute;
+    top:25px;
+    left:25px;
+    height:20px;
+    width:50px;
+    background:transparent;
+    border:2px solid var(--sun-light);
+    z-index:100;
+    border-radius:12px;
+}
+
+.color-switch::before{
+    position:absolute;
+    top:2px;
+    bottom:2px;
+    width:16px;
+    border-radius:50%;
+    background:var(--sun-light);
+    content:"";
+}
+
+body:not(.light) .color-switch::before{
+    left:2px;
+}
+
+body.light .color-switch::before{
+    right:2px;
+}
+
 @keyframes text-slidein {
     from{
         transform: translate(0, -15px);

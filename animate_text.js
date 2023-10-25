@@ -1,6 +1,7 @@
 let showContent = false;
 
 function showAll(){
+    document.getElementsByClassName("main")[0].classList.add("instant-reveal")
     let toReveal = document.querySelectorAll(".main-content > :not(.revealed)");
     for(let i = 0; i < toReveal.length; i++){
         let elem = toReveal[i];

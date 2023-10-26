@@ -29,16 +29,16 @@ body.light{
     --sun-light: #ffd319;
     --sun-dark: #f222ff;
 
-    --sky-top: var(--bg-main);
-    --sky-mid: #d6daff;
-    --sky-bottom: #7080ca;
+    --sky-top: #7590bf;
+    --sky-mid: #ff8e74;
+    --sky-bottom: #fde75b;
 
-    --content-border: #ff4b4b80;
+    --content-shadow: #ff000041;
 
     --bg-top-gradient: linear-gradient(0deg, #fff0, var(--bg-main));
     --bg-tile-image: url("bgmasklight.png");
-    --bg-gradient-top: #f001;
-    --bg-gradient-bottom: #00f1;
+    --bg-gradient-top: #f002;
+    --bg-gradient-bottom: #00f2;
 }
 
 body{
@@ -55,18 +55,18 @@ body{
     --sky-top: var(--bg-main);
     --sky-mid: #17085a;
     --sky-bottom: #e3004f;
-    --content-border: #9d2aa580;
+    --content-shadow: #ff000071;
 
     --bg-top-gradient: linear-gradient(0deg, #130e1700, var(--bg-main));
     --bg-tile-image: url("bgmaskdark.png");
-    --bg-gradient-top: #f002;
+    --bg-gradient-top: #f004;
     --bg-gradient-bottom: #00f5;
     background-image: linear-gradient(var(--bg-gradient-top), var(--bg-gradient-bottom), var(--bg-gradient-top));
     background-size: 100vw 200vh;
     background-repeat: repeat;
     background-color: var(--bg-main);
     background-attachment: fixed;
-    animation: 12s linear background-gradient-slide infinite;
+    animation: 16s linear background-gradient-slide infinite;
 }
 
 @keyframes background-gradient-slide {
@@ -87,19 +87,29 @@ body{
     flex-direction: column;
     justify-content: center;
     background-color: black;
-    /*background: var(--bg-main);*/
     background: var(--bg-top-gradient), var(--bg-tile-image);
     background-repeat: no-repeat, repeat;
     background-attachment: scroll, fixed;
     background-size: 100% 900px, 80px 80px;
-    background-position: 0px 300px, 0 calc(var(--scrollheight) * -0.05);
+    /* background-position: 0px 300px, 0 calc(var(--scrollheight) * -0.05); */
+    background-position: 0px 300px, 0 0;
     font-family: Perfect-Dos;
 
     margin: 0px;
     padding:30px;
 
     gap: 20px;
-    transition: --bg-main 2s;
+    animation: 2s ease-out background-cat-reveal;
+}
+
+@keyframes background-cat-reveal {
+    from{
+        background-size: 100% 9000px, 80px 80px;
+    }
+}
+
+.main.instant-reveal{
+    animation:none;
 }
 
 .name-bg{
@@ -286,12 +296,34 @@ body.light .name-head{
 }
 
 .content-text{
-    border: 2px dashed var(--content-border);
+    display: flex;
+    flex-direction: row;
+    border: 2px solid var(--text-light);
     padding:24px;
-    border-radius:24px;
+    background-color: var(--bg-main);
+    box-shadow: -8px -8px var(--content-shadow);
     color: var(--text-med);
     font-size: max(24px, 1.1vw);
     position:sticky;
+
+    --cols-gap: 40px;
+
+    gap: var(--cols-gap);
+}
+
+.content-text .content-col{
+    position: sticky;
+    flex: 1 1 100%;
+}
+
+.content-text .content-col+.content-col::before{
+    --divider-width: 2px;
+    content:"";
+    width:0px;
+    height:100%;
+    border-right: var(--divider-width) dashed var(--text-light);
+    position: absolute;
+    left: calc(-0.5 * var(--cols-gap) - var(--divider-width) / 2)
 }
 
 .content-text .subsection+.subsection{
@@ -375,8 +407,8 @@ body.light .name-head{
 
 .side-nav-menu > .nav-item.current-section > a{
     color: var(--text-light);
-    font-weight: bold;
-    font-size: 22px;
+    font-weight: normal;
+    transform: scale(1.15) translateX(6px);
 }
 
 .side-nav-menu > .nav-item> .nav-subitems{
@@ -430,7 +462,7 @@ body.light .name-head{
 .color-switch{
     opacity:0.9;
     cursor:pointer;
-    position:absolute;
+    position:fixed;
     top:25px;
     left:25px;
     height:20px;

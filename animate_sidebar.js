@@ -30,19 +30,21 @@ for(let i = 0; i < sections.length; i++){
     navItem.appendChild(navSubItems);
 
     let subsections = section_head.nextElementSibling.getElementsByClassName("subsection-head");
+    let numadded = 0;
     for(let n = 0; n < subsections.length; n++){
     	const subsection = subsections[n];
         let navSubItem = document.createElement("div");
         navSubItem.classList.add("nav-subitem");
         let name = subsection.getAttribute("nav-sublabel");
-        if(!name){
-            name = subsection.innerText;
+        if(!name || name == ""){
+            continue;
         }
-        if(n > 2){ //Limit to 3 subitems per section
+        if(numadded > 2){ //Limit to 3 subitems per section
             name = "...";
         }
         navSubItem.innerText = name;
         navSubItems.appendChild(navSubItem);
+        numadded++;
         if(n > 2){
             break;
         }

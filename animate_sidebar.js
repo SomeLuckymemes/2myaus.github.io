@@ -23,23 +23,29 @@ for(let i = 0; i < sections.length; i++){
 
     leftNav.appendChild(navItem);
     navItem.appendChild(navText);
-    
+
     let navSubItems = document.createElement("div");
     navSubItems.classList.add("nav-subitems");
-    
+
     navItem.appendChild(navSubItems);
-    
+
     let subsections = section_head.nextElementSibling.getElementsByClassName("subsection-head");
     for(let n = 0; n < subsections.length; n++){
     	const subsection = subsections[n];
-	let navSubItem = document.createElement("div");
-	navSubItem.classList.add("nav-subitem");
+        let navSubItem = document.createElement("div");
+        navSubItem.classList.add("nav-subitem");
         let name = subsection.getAttribute("nav-sublabel");
         if(!name){
-	    name = subsection.innerText;
+            name = subsection.innerText;
         }
-	navSubItem.innerText = name;
-	navSubItems.appendChild(navSubItem);
+        if(n > 2){ //Limit to 3 subitems per section
+            name = "...";
+        }
+        navSubItem.innerText = name;
+        navSubItems.appendChild(navSubItem);
+        if(n > 2){
+            break;
+        }
     }
 }
 

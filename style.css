@@ -23,7 +23,7 @@ body.light{
     --text-dim: #8e7d8f;
     --text-med: #ff8080;
     --text-light: #ff6060;
-    --text-light-2: #ffd319;
+    --text-light-2: #b844ae;
     --text-light-3: #ffea8f;
 
     --sun-light: #ffd319;
@@ -296,8 +296,6 @@ body.light .name-head{
 }
 
 .content-text{
-    display: flex;
-    flex-direction: row;
     border: 2px solid var(--text-light);
     padding:24px;
     background-color: var(--bg-main);
@@ -305,18 +303,22 @@ body.light .name-head{
     color: var(--text-med);
     font-size: max(24px, 1.1vw);
     position:sticky;
-
-    --cols-gap: 40px;
-
-    gap: var(--cols-gap);
 }
 
-.content-text .content-col{
+.col-layout{
+    --cols-gap: 80px;
+
+    gap: var(--cols-gap);
+    display: flex;
+    flex-direction: row;
+}
+
+.col-layout .content-col{
     position: sticky;
     flex: 1 1 100%;
 }
 
-.content-text .content-col+.content-col::before{
+.col-layout .content-col+.content-col::before{
     --divider-width: 2px;
     content:"";
     width:0px;
@@ -324,6 +326,12 @@ body.light .name-head{
     border-right: var(--divider-width) dashed var(--text-light);
     position: absolute;
     left: calc(-0.5 * var(--cols-gap) - var(--divider-width) / 2)
+}
+
+.grid-layout{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .content-text .subsection+.subsection{

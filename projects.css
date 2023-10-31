@@ -6,7 +6,7 @@
     min-height:200px;
     text-align:center;
     padding: 10px;
-    padding-bottom: 60px;
+    padding-bottom: 4vw;
     position:sticky;
     overflow:clip;
     display:flex;
@@ -41,6 +41,14 @@
     padding:4px;
 }
 
+.project-game-button{
+    position: absolute;
+    left: 4vw;
+    bottom: 15px;
+    transition: background-color 0.1s linear;
+    cursor: pointer;
+    padding:4px;
+}
 .project .background-cover{
     position: absolute;
     left:0;

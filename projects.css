@@ -6,7 +6,7 @@
     min-height:200px;
     text-align:center;
     padding: 10px;
-    padding-bottom: 60px;
+    padding-bottom: 4vw;
     position:sticky;
     overflow:clip;
     display:flex;
@@ -30,17 +30,31 @@
 
     height:max(34px, 1.8vw);
     width:max(34px, 1.8vw);
+    position: absolute;
+    left: 0.6vw;
+    bottom: 0.6vw;
 }
 
 .project-github-button{
-    position: absolute;
-    left: 15px;
-    bottom: 15px;
     transition: background-color 0.1s linear;
     cursor: pointer;
     padding:4px;
 }
 
+.project-game-button{
+    transition: background-color 0.1s linear;
+    cursor: pointer;
+    padding:4px;
+}
+
+.project-svg-icon + .project-svg-icon{
+    position: absolute;
+    left: 3vw;
+    bottom: 0.6vw;
+    transition: background-color 0.1s linear;
+    cursor: pointer;
+    padding:4px;
+}
 .project .background-cover{
     position: absolute;
     left:0;
@@ -67,6 +81,10 @@
     object-position: center;
     z-index: -2;
     transition: scale 0.1s ease-out;
+}
+
+.project video.bg{
+    width:140%; /*Should be 100%; Firefox displays picture-in-picture prompt*/
 }
 
 .project:hover .bg{

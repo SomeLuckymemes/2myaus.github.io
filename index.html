@@ -75,7 +75,7 @@
                         About Me
                     </div>
                     <div class="content-text">
-                        <div class="col-layout">
+                        <div class="col-layout collapsible">
                             <div class="content-col">
                                 <div class="subsection-head" nav-sublabel="who i am">
                                     Who I am
@@ -128,21 +128,22 @@
                         My Projects
                     </div>
                     <div class="content-text">
-                        <div class="col-layout">
+                        <div class="col-layout collapsible">
                             <div class="content-col">
+                                <div class="subsection-head" nav-sublabel="software">Software</div>
                                 <div class="subsection">
                                     <div class="grid-layout">
                                         <div class="project fastrm">
-                                            <div class="subsection-head" nav-sublabel="fastrm">Fast Rock Maker</div>
+                                            <div class="subsection-head" nav-sublabel="">Fast Rock Maker</div>
                                             <div class="desc">
                                                 A continuous 2d cave-generation algorithm written in C++ and made for my work-in-progress cave game, Noct
                                             </div>
                                             <div class="project-github-button project-svg-icon" onclick="window.open('https://github.com/2myaus/Fast-Rock-Maker')"><svg fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%;" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></div>
                                             <div class="background-cover"></div>
-                                            <video src="Media/cave.webm" class="bg" autoplay muted disablePictureInPicture></video>
+                                            <video src="Media/cave.webm" poster="Media/cavepreview.webp"  class="bg" autoplay muted disablePictureInPicture></video>
                                         </div>
                                         <div class="project chesscat">
-                                            <div class="subsection-head" nav-sublabel="chesscat">Chesscat</div>
+                                            <div class="subsection-head" nav-sublabel="">Chesscat</div>
                                             <div class="desc">
                                                 A chess game controller written in C++ that supports custom game rules such as different board sizes and kangaroo pawns
                                             </div>
@@ -151,7 +152,7 @@
                                             <img src="Media/chesscat.webp" class="bg">
                                         </div>
                                         <div class="project catears">
-                                            <div class="subsection-head" nav-sublabel="catears">Catears</div>
+                                            <div class="subsection-head" nav-sublabel="">Catears</div>
                                             <div class="desc">
                                                 A console-based passive network scanner written in C to detect local network devices without active pinging
                                             </div>
@@ -159,27 +160,40 @@
                                             <div class="background-cover"></div>
                                             <img src="Media/catears.webp" class="bg">
                                         </div>
-                                        <div class="project">
-                                            <div class="subsection-head" nav-sublabel="crykit">Crykit</div>
-                                            Crykit
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="content-col">
+                                <div class="subsection-head" nav-sublabel="games">Games</div>
                                 <div class="subsection">
                                     <div class="grid-layout">
-                                        <div class="project">
-                                            <div class="subsection-head" nav-sublabel="bagt">Bad Asteroid Game Thing</div>
-                                            Bad Asteroid Game Thing
+                                        <div class="project bagt">
+                                            <div class="subsection-head" nav-sublabel="">Bad Asteroid Game Thing</div>
+                                            <div class="desc">
+
+                                            </div>
+                                            <div class="project-game-button project-svg-icon" onclick="window.open('https://proto.myaumyau.dev/misc/bagt/')"><svg fill="none" stroke-width="6" viewBox="10 10 80 80" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%;" xmlns="http://www.w3.org/2000/svg"><path d="M59.7,47,48.3,39.4a3.6,3.6,0,0,0-5.6,3V57.6a3.6,3.6,0,0,0,5.6,3L59.7,53A3.6,3.6,0,0,0,59.7,47Z" /><path d="M82.1,50A32.1,32.1,0,1,1,50,17.9,32.1,32.1,0,0,1,82.1,50Z"/></svg></div>
+                                            <div class="background-cover"></div>
+                                            <video src="Media/bagt.webm" poster="Media/bagtpreview.webp" class="bg" autoplay muted disablePictureInPicture></video>
                                         </div>
-                                        <div class="project">
-                                            <div class="subsection-head" nav-sublabel="doodle-swing">Doodle Swing</div>
-                                            Doodle Swing
+                                        <div class="project doodleswing">
+                                            <div class="subsection-head" nav-sublabel="">Doodle Swing</div>
+                                            <div class="desc">
+
+                                            </div>
+                                            <div class="project-game-button project-svg-icon" onclick="window.open('https://proto.myaumyau.dev/misc/doodleswing/')"><svg fill="none" stroke-width="6" viewBox="10 10 80 80" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%;" xmlns="http://www.w3.org/2000/svg"><path d="M59.7,47,48.3,39.4a3.6,3.6,0,0,0-5.6,3V57.6a3.6,3.6,0,0,0,5.6,3L59.7,53A3.6,3.6,0,0,0,59.7,47Z" /><path d="M82.1,50A32.1,32.1,0,1,1,50,17.9,32.1,32.1,0,0,1,82.1,50Z"/></svg></div>
+                                            <div class="background-cover"></div>
+                                            <img src="Media/doodleswing.webp" class="bg">
                                         </div>
-                                        <div class="project">
-                                            <div class="subsection-head" nav-sublabel="factorygame">Factory Game</div>
-                                            Factory Game
+                                        <div class="project factorygame">
+                                            <div class="subsection-head" nav-sublabel="">Factory Game</div>
+                                            <div class="desc">
+
+                                            </div>
+                                            <div class="project-github-button project-svg-icon" onclick="window.open('https://github.com/2myaus/factorygame/')"><svg fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%;" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></div>
+                                            <div class="project-game-button project-svg-icon" onclick="window.open('https://proto.myaumyau.dev/misc/factorygame/')"><svg fill="none" stroke-width="6" viewBox="10 10 80 80" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%;" xmlns="http://www.w3.org/2000/svg"><path d="M59.7,47,48.3,39.4a3.6,3.6,0,0,0-5.6,3V57.6a3.6,3.6,0,0,0,5.6,3L59.7,53A3.6,3.6,0,0,0,59.7,47Z" /><path d="M82.1,50A32.1,32.1,0,1,1,50,17.9,32.1,32.1,0,0,1,82.1,50Z"/></svg></div>
+                                            <div class="background-cover"></div>
+                                            <img src="Media/factory.webp" class="bg">
                                         </div>
                                     </div>
                                 </div>

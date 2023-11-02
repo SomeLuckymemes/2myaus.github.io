@@ -9,3 +9,16 @@ scriptParent.onclick = (e) => {
     if(scriptParent.classList.contains("popup-revealed")) return;
     scriptParent.classList.add("popup-revealed");
 }
+
+window.addEventListener("load", () => {
+    Array.from(document.getElementsByClassName("email-copy-button")).forEach((elem) => {
+        console.log(elem);
+        elem.addEventListener("click", () => {
+            elem.classList.add("clicked");
+            setTimeout(() => {
+                elem.classList.remove("clicked");
+            }, 1000);
+        });
+    });
+
+});

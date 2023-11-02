@@ -256,10 +256,6 @@ body.light .name-head{
     font-weight: bold;
 }
 
-.social-buttons .social-button .social-popup a:active{
-    filter: brightness(50%);
-}
-
 .social-buttons .social-button .social-popup::before{
     background-color: var(--bg-main);
     width:100%;
@@ -282,9 +278,20 @@ body.light .name-head{
     cursor: auto;
 }
 
+.email-copy-button{
+    cursor:pointer;
+    color:var(--text-light);
+    text-decoration:underline;
+    transition: color 0.05s linear;
+}
+
+.email-copy-button.clicked{
+    color:var(--text-light-2);
+}
+
 .main-content{
     width:80vw;
-    padding-bottom: 20vw;
+    padding-bottom: 10vw;
 }
 
 .section-head{

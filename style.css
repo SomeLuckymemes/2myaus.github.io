@@ -345,6 +345,14 @@ body.light .name-head{
     }
 }
 
+.line-divider-hor{
+    width:100%;
+    height:0px;
+    border-top: 2px dashed var(--text-light);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .col-layout > .content-col+.content-col::before{
     --divider-width: 2px;
     content:"";

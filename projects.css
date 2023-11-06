@@ -21,6 +21,7 @@
 
 .project .desc{
     width: 60%;
+    position: sticky;
 }
 
 .project-svg-icon{
@@ -89,4 +90,22 @@
 
 .project:hover .bg{
     scale: 1.02;
+}
+
+.project .desc::before{
+    content:"";
+    z-index: -1;
+    position: absolute;
+    top:-1vw;
+    left:-1vw;
+    right:-1vw;
+    bottom:-1vw;
+    opacity: 0;
+    background-color: var(--bg-main);
+    transition: opacity 0.1s linear;
+    border-radius: 1vw;
+}
+
+.project:hover .desc::before{
+    opacity: 0.3;
 }

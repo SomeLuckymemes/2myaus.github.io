@@ -39,13 +39,15 @@ for(let i = 0; i < sections.length; i++){
         if(!name || name == ""){
             continue;
         }
+        let finish = false;
         if(numadded > 2){ //Limit to 3 subitems per section
             name = "...";
+            finish = true;
         }
         navSubItem.innerText = name;
         navSubItems.appendChild(navSubItem);
         numadded++;
-        if(n > 2){
+        if(finish){
             break;
         }
     }

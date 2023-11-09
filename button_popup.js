@@ -12,7 +12,6 @@ scriptParent.onclick = (e) => {
 
 window.addEventListener("load", () => {
     Array.from(document.getElementsByClassName("email-copy-button")).forEach((elem) => {
-        console.log(elem);
         elem.addEventListener("click", () => {
             elem.classList.add("clicked");
             setTimeout(() => {

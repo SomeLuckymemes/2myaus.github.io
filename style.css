@@ -295,6 +295,7 @@ body.light .name-head{
 }
 
 .section-head{
+    cursor: default;
     font-family: Kitty-M;
     color: var(--text-light);
     font-size: max(56px, 2.5vw);

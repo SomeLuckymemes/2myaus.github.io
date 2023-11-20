@@ -278,10 +278,13 @@ body.light .name-head{
     cursor: auto;
 }
 
-.email-copy-button{
+.contact-button{
     cursor:pointer;
     color:var(--text-light);
     text-decoration:underline;
+}
+
+.email-copy-button{
     transition: color 0.05s linear;
 }
 

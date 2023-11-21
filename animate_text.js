@@ -13,7 +13,7 @@ function showAll(){
 }
 
 function scrollReact(){
-    if(!showContent) return;
+    //if(!showContent) return;
     let toReveal = document.querySelectorAll(".main-content > :not(.revealed)");
     if(toReveal.length == 0) return;
     let elem = toReveal[0];
@@ -24,7 +24,7 @@ function scrollReact(){
         elem.classList.add("revealed");
     }
     if(toReveal.length > 1){
-        setTimeout(scrollReact, 100);
+        setTimeout(scrollReact, 50);
     }
 }
 
@@ -39,5 +39,5 @@ window.onload = () => {
     setTimeout(() => {
         showContent = true;
         scrollReact();
-    }, 2000);
+    }, 1000);
 }

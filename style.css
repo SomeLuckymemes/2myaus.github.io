@@ -435,6 +435,7 @@ body.light .name-head{
     justify-content: center;
 
     transition: opacity 0.25s linear, transform 0.25s linear;
+    pointer-events: none;
 
 }
 
